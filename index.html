@@ -16,7 +16,7 @@
 
     <div class="col-auto bg-secondary p-5 rounded">
         
-        <form onsubmit="false">
+        <form onsubmit="return false">
 
                 <!-- input do numero 1 -->
             <div class="row">
@@ -105,9 +105,16 @@
         let resultado;
 
     // entrada de dado do número 1
+
     
-    numero1 = document.querySelector('#numero1').value;
-    numero2 = document.querySelector('#numero2').value;
+    numero1 = parseInt(document.querySelector('#numero1').value);
+    numero2 = parseInt(document.querySelector('#numero2').value);
+
+    resultado = numero1 + numero2;
+
+    document.querySelector('#resultado').innerHTML = resultado;
+
+    // alert('resultado: ' + resultado);
 
     }
 
