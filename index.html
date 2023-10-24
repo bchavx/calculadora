@@ -28,18 +28,18 @@
 
                 <!-- OPERADORES MATEMÁTICOS -->
 
-<DIV class="row">
-    <div class="col">
-            <label for="operador" class="form-label fw-bold text-light">OPERADOR</label>
-            <select name="operador" id="operador" class="form-select"/>
-            <option value=""></option>
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            </select>
-    </div>
-</DIV>
+            <DIV class="row">
+                <div class="col">
+                    <label for="operador" class="form-label fw-bold text-light">OPERADOR</label>
+                    <select name="slcOperador" id="slcOperador" class="form-select"/>
+                    <option value=""></option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    </select>
+                </div>
+            </DIV>
 
                 <!-- input do numero 2 -->
 
@@ -53,7 +53,7 @@
                 <!-- imagem do operador -->
 
                 <div class="row justify-content-center">
-                    <div class="col align-items-center mt-2">
+                    <div class="col-auto align-items-center mt-2">
                         <img class="img-thumbnail" id="imgOperacao"/>
                     </div>
                 </div>
@@ -73,14 +73,14 @@
                 <!-- BOTÃO DE CALCULAR -->
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-primary mt-2" name="calcular" id="calcular" onclick="somar()"> 
+                        <button class="btn btn-primary mt-2" name="calcular" id="calcular" onclick="calculadora()"> 
                             CALCULAR
                         </button> 
                     </div>
 
                 <!-- BOTÃO LIMPAR -->
                 <div class="col">
-                    <button class="btn btn-danger mt-2" name="limpar" id="limpar">
+                    <button class="btn btn-danger mt-2" name="btnlimpar" id="btnlimpar" onclick="limpar()">
                     LIMPAR
                     </button>
                 </div>
@@ -92,33 +92,7 @@
 
 </body>
 
-<script>
-
-    // declaração da função de somar
-
-    function somar(){
-
-    // declaração de váriaveis 
-
-        let numero1;
-        let numero2;
-        let resultado;
-
-    // entrada de dado do número 1
-
-    
-    numero1 = parseInt(document.querySelector('#numero1').value);
-    numero2 = parseInt(document.querySelector('#numero2').value);
-
-    resultado = numero1 + numero2;
-
-    document.querySelector('#resultado').innerHTML = resultado;
-
-    // alert('resultado: ' + resultado);
-
-    }
-
-</script>
-
+<script src="./calculadora.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </html>
