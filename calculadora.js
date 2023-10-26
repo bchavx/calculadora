@@ -115,4 +115,5 @@ function calculadora(){
             document.querySelector('#numero2').value = '';
             document.querySelector('#resultado').innerHTML = '-';
             imgOperacao.setAttribute('src', '');
+            document.querySelector('#slcOperador').value = '';
         }
